@@ -21,7 +21,7 @@ $valorTotal *= .9;
 
 $a = 10;
 $b = 2;
-
+/*
 echo $a + $b."<br>";
 
 echo $a - $b."<br>";
@@ -33,5 +33,10 @@ echo $a / $b."<br>";
 echo $a % $b."<br>";
 
 echo $a ** $b."<br>";
+*/
 
+$a = 50;
+$b = 35;
+
+var_dump($a <=> $b);
 ?>
