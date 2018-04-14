@@ -31,7 +31,7 @@ $aluno->setDesSenha("ProcedureTeste");
 $aluno->insert();
 echo $aluno;
 */
-
+/*
 $usuario = new Usuario();
 $usuario->loadById(8);
 
@@ -39,4 +39,15 @@ $usuario->loadById(8);
 
 $usuario->upDate("Teste UpDate 2","UpDate Teste 2");
 echo $usuario;
+*/
+
+$usuario = new Usuario();
+$usuario->loadById(7);
+
+echo $usuario." <br><br>";
+
+$usuario->delete();
+
+echo $usuario." Usuario deletado com sucesso";
+
 ?>
