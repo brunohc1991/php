@@ -1,5 +1,7 @@
 <?php
 
+require_once("Config.php");
+
 class usuario{
     private $idUsuario;
     private $desLogin;
@@ -49,17 +51,17 @@ class usuario{
             $this->setDesLogin($row['desLogin']);
             $this->setDesSenha($row['desSenha']);
             $this->setDtCadastro(new DateTime($row['dtCadastro']));
-        
-            
         }
     }
     
     public function __toString(){
         return json_encode(array(
-           "idUsuario" => $this->getIdusuario(),
-           "desLogin" => $this->getDesLogin(),
-           "desSenha" => $this->getDesSenha(),
-           "dtCadastro" => $this->getdtCadastro()->format("d/m/Y")
+            
+            "idUsuario"=>$this->getIdUsuario(),
+            "desLogin"=>$this->getDesLogin(),
+            "desSenha"=>$this->getDesSenha(),
+            "dtCadastro"=>$this->getDtCadastro()->format("d/m/Y")
+            
         ));
     }
 }
